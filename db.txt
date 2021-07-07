@@ -1,0 +1,230 @@
+Database -> 
+
+.mdf -> Primary Data File
+.ndf -> Secondary Data File (optional)
+.ldf -> log file
+
+RDBMS -> MS SQL Server
+
+SQL -> Structured Query Language
+
+DDL -> Data Definition Language
+Create
+Alter
+Drop
+
+Truncate
+
+DML -> Data Manipulation Language
+
+Select
+Insert
+Update
+Delete
+Merge
+
+DCL -> Data Control Language
+
+Grant
+Revoke
+Deny
+
+TCL -> Transaction Control Language
+
+Commit
+Rollback
+Savepoint
+
+codeshare.io/abhishekpwc
+
+======================================
+
+Integrity Constraints
+
+1. Primary Key
+2. Unique -> 1 NULL
+3. Not Null
+4. Check
+5. Foreign Key
+
+Default
+
+PK
+1
+2
+3
+
+FK
+1
+1
+2
+2
+2
+NULL
+============================================
+
+JOINS -> DISPLAY DATA FROM MORE THAN 1 TABLE
+
+INNER -> MATCHED DATA(11)
+SQL-89 -> ,
+SQL-94 -> JOIN --RECOMMENDED
+
+OUTER -> MATCHED DATA(11) + UNMATCHED DATA
+LEFT -> 1
+RIGHT -> 1
+FULL
+
+SELF 
+
+CROSS -> PRODUCT
+
+
+A JOIN B
+
+A-> LEFT
+B-> RIGHT
+
+B JOIN A
+
+B-> LEFT
+A-> RIGHT
+
+
+=====================
+
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+
+---------------------
+
+
+SCALAR SUBQUERY -> 1 VALUE = > < >= <= !=
+MULTI ROW SUBQUERY -> MULTIPLE VALUES 	IN ANY ALL
+
+IN
+
+>ANY	GREATER THAN SMALLEST
+>ALL	GREATER THAN GREATEST
+<ANY	SMALLER THAN GREATEST
+<ALL	SMALLER THAN SMALLEST
+
+
+unique,pk -> surrogate key -> (auto generates unique numbers)
+
+sets
+----
+
+union
+intersect
+except
+-------
+union all
+
+===========================
+
+index
+
+pk,unique -> automatically creates index
+
+
+2
+
+1. Clustered -> 1 -> Physical
+2. Non-Clustered -> many -> Logical
+
+
+
+
+sql -> declarative
+parsing
+execution plan
+
+
+table scan
+index scan
+
+===============================================
+SQL -> fixed schema
+
+create table tab1
+(
+col1
+col2
+col3
+)
+insert into tab1 values(1,2,3)
+insert into tab1 values(11,22,33)
+insert into tab1 values(111,222,333)
+insert into tab1 values(null,null,3)
+-------------------
+NoSQL -> no fixed schema
+insert tab1(c1:1,c2:2,c3:3)
+insert tab1(c1:1,c2:2,c3:3,c4:4)
+insert tab1(c1:1,c2:2)
+insert tab1(c1:1)
+
+==============================
+web app -> shopping(flipkart)
+1-> Product -> Product(nosql)
+2-> Buy -> Order(sql)
+
+=====================================
+
+SQL			NoSQL(MongoDB)		NoSQL(AZURE COSMOSDB)
+=====================================================================
+DB			DB			DB
+Table			Collection		Container
+Row			Document(BSON)		Item
+
+
+JSON=> {key:value,key:value}
+JSON=> {property:value,property:value}		
+BSON -> Binary JSON
+
+==========================
+
+SQL Server(1433)
+
+User(Client) -> Server -> DB
+SSMS(CLIENT) -> serevr -> db
+
+
+MongoDB(27017)
+
+mongo.exe = user(client)
+mongod.exe = server
+===============================================
+
+Neo4j -> Graph DB
+
+Cypher query (similar to sql)
+
+match( n1->n2)
+
+
+C:\Users\Administrator\Documents\relate-data\dbmss\dbms-240818a1-3dec-40c0-ad6c-7f046f24db23\import
+
+
+
+
+
+
+
+
+
+
+
+index seek
+
+
+
+
+
+
+
+
+

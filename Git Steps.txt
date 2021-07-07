@@ -1,0 +1,336 @@
+D:\gitdemo>dir
+ Volume in drive D is New Volume
+ Volume Serial Number is 6092-998C
+
+ Directory of D:\gitdemo
+
+08-06-2021  09:47    <DIR>          .
+08-06-2021  09:47    <DIR>          ..
+08-06-2021  09:47                 5 file1.txt
+08-06-2021  09:47                 2 file2.txt
+               2 File(s)              7 bytes
+               2 Dir(s)  181,143,171,072 bytes free
+
+D:\gitdemo>dir /a
+ Volume in drive D is New Volume
+ Volume Serial Number is 6092-998C
+
+ Directory of D:\gitdemo
+
+08-06-2021  09:47    <DIR>          .
+08-06-2021  09:47    <DIR>          ..
+08-06-2021  09:47                 5 file1.txt
+08-06-2021  09:47                 2 file2.txt
+               2 File(s)              7 bytes
+               2 Dir(s)  181,143,171,072 bytes free
+
+D:\gitdemo>git init
+Initialized empty Git repository in D:/gitdemo/.git/
+
+D:\gitdemo>dir /a   
+ Volume in drive D is New Volume  
+ Volume Serial Number is 6092-998C
+
+ Directory of D:\gitdemo
+
+08-06-2021  09:57    <DIR>          .
+08-06-2021  09:57    <DIR>          ..
+08-06-2021  09:57    <DIR>          .git
+08-06-2021  09:47                 5 file1.txt
+08-06-2021  09:47                 2 file2.txt
+               2 File(s)              7 bytes
+               3 Dir(s)  181,143,121,920 bytes free
+
+D:\gitdemo>cd .git
+
+D:\gitdemo\.git>dir
+ Volume in drive D is New Volume
+ Volume Serial Number is 6092-998C
+
+ Directory of D:\gitdemo\.git
+
+08-06-2021  09:57               130 config
+08-06-2021  09:57                73 description
+08-06-2021  09:57                23 HEAD
+08-06-2021  09:57    <DIR>          hooks
+08-06-2021  09:57    <DIR>          info
+08-06-2021  09:57    <DIR>          objects
+08-06-2021  09:57    <DIR>          refs
+               3 File(s)            226 bytes
+               4 Dir(s)  181,143,121,920 bytes free
+
+D:\gitdemo\.git>cd .git
+The system cannot find the path specified.
+
+D:\gitdemo\.git>cd ..
+
+D:\gitdemo>cd .     
+
+D:\gitdemo>git add .
+
+D:\gitdemo>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+        new file:   file2.txt
+
+
+D:\gitdemo>git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Administrator@DESKTOP-PNSMDPV.(none)')
+
+D:\gitdemo>git config --global user.email "abhishek.cls@gmail.com"
+
+D:\gitdemo>git config --global user.name "Abhishek Samanta"       
+
+D:\gitdemo>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=abhishek.cls@gmail.com
+user.name=Abhishek Samanta
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+D:\gitdemo>git config user.name
+Abhishek Samanta
+
+D:\gitdemo>git config user.email
+abhishek.cls@gmail.com
+
+D:\gitdemo>git commit -m "first commit"
+[master (root-commit) 0b0c821] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+
+D:\gitdemo>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\gitdemo>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\gitdemo>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+        modified:   file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\gitdemo>git add .
+
+D:\gitdemo>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.txt
+        modified:   file2.txt
+
+
+D:\gitdemo>git commit -m "second commit" 
+[master 19d288d] second commit
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+D:\gitdemo>git log
+commit 19d288d681d30858bdcc81edf76616cca93f4dde (HEAD -> master)
+Author: Abhishek Samanta <abhishek.cls@gmail.com>
+Date:   Tue Jun 8 11:25:30 2021 +0530
+
+    second commit
+
+commit 0b0c821f8273f5e03f724070bc26f65a719221d6
+Author: Abhishek Samanta <abhishek.cls@gmail.com>
+Date:   Tue Jun 8 11:07:34 2021 +0530
+
+    first commit
+
+D:\gitdemo>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\gitdemo>git diff
+diff --git a/file1.txt b/file1.txt
+index e3956dd..a2c2227 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1 @@
+-hello abhishek
+\ No newline at end of file
++hello abhishek samanta
+\ No newline at end of file
+
+D:\gitdemo>git branch
+* master
+
+D:\gitdemo>git branch -M main
+
+D:\gitdemo>git branch
+* main
+
+D:\gitdemo>git remote add origin https://github.com/abhishekcls/firstdemo.git
+
+D:\gitdemo>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 532 bytes | 266.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/abhishekcls/firstdemo.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+D:\gitdemo>git branch
+* main
+
+D:\gitdemo>git checkout main
+Already on 'main'
+M       file1.txt
+Your branch is up to date with 'origin/main'.
+
+D:\gitdemo>git checkout feature
+error: pathspec 'feature' did not match any file(s) known to git
+
+D:\gitdemo>git checkout -b feature 
+Switched to a new branch 'feature'
+
+D:\gitdemo>git branch
+* feature
+  main
+
+D:\gitdemo>git add file3.txt
+
+D:\gitdemo>git status
+On branch feature
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file3.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+
+D:\gitdemo>git add .        
+
+D:\gitdemo>git status
+On branch feature
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.txt
+        new file:   file3.txt
+
+
+D:\gitdemo>git commit -m "feature branch commit"
+[feature 3dc5eeb] feature branch commit
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 file3.txt
+
+D:\gitdemo>git log
+commit 3dc5eeb6a5dcafa7a07b5746597818a0aa4e9b8d (HEAD -> feature)
+Author: Abhishek Samanta <abhishek.cls@gmail.com>
+Date:   Tue Jun 8 13:15:03 2021 +0530
+
+    feature branch commit
+
+commit 19d288d681d30858bdcc81edf76616cca93f4dde (origin/main, main)
+Author: Abhishek Samanta <abhishek.cls@gmail.com>
+Date:   Tue Jun 8 11:25:30 2021 +0530
+
+    second commit
+
+commit 0b0c821f8273f5e03f724070bc26f65a719221d6
+Author: Abhishek Samanta <abhishek.cls@gmail.com>
+Date:   Tue Jun 8 11:07:34 2021 +0530
+
+    first commit
+
+D:\gitdemo>git push -u origin feature
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 356 bytes | 356.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/abhishekcls/firstdemo/pull/new/feature
+remote:
+To https://github.com/abhishekcls/firstdemo.git
+ * [new branch]      feature -> feature
+Branch 'feature' set up to track remote branch 'feature' from 'origin'.
+
+D:\gitdemo>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+D:\gitdemo>git checkout feature
+Switched to branch 'feature'
+Your branch is up to date with 'origin/feature'.
+
+D:\gitdemo>git checkout main    
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+D:\gitdemo>git merge feature
+Updating 19d288d..3dc5eeb
+Fast-forward
+ file1.txt | 2 +-
+ file3.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 file3.txt
+
+D:\gitdemo>git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/abhishekcls/firstdemo.git
+   19d288d..3dc5eeb  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+D:\gitdemo>

@@ -1,0 +1,97 @@
+solution-> project -> files & folders
+
+proj1 -> hash 123
+proj1 -> hash 256
+
+day1 -> 
+day2 ->
+day3 ->
+
+
+
+Cryptography
+
+1. Encryption
+	a. Symmetric
+	b. Asymmetric
+2. Hashing
+
+
+abc -> 123
+abc -> 123
+
+123
+
+google -> 
+
+
+
+===================================
+
+git
+
+project (working dir) -> Add[Staging] -> Commit(hash) [Local Repo] -> Push[Remote Repo](Github, Azure Repos,...)
+
+git init(only 1 time for a project) -> U .git(folder)[Local Repo]
+git add(many) -> A -> Staging
+git commit(many) -> Local Repo
+Github/Azure Repos ... -> Remote Repos
+git remote add origin https://github.com/abhishekcls/firstdemo.git
+git push -u origin master
+----------------------------
+git branch -M main   => changing the master branch name to main
+git push -u origin main
+
+
+====================
+Task -> repeat (create a new project and push it in the new github repo)
+
+
+U -> Untracked
+A -> Added
+M -> Modified
+
+. 	-> current folder/directory
+.. 	-> parent folder/directory
+
+
+abc -> xyz
+
+
+c:\abc\xyz>cd .
+c:\abc\xyz>
+
+c:\abc\xyz>cd ..
+c:\abc>
+
+
+
+
+git config			=> current project
+git config --system		=> all users
+git config --global		=> single user
+
+
+0b0c821 -> first commit
+19d288d -> second commit
+
+
+.gitignore -> files which you want to exclude from being tracked
+
+echo "# firstdemo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+
+git branch -M main
+git remote add origin https://github.com/abhishekcls/firstdemo.git
+git push -u origin main
+
+
+
+
+master(old) -> main(new)
+
+
+
+
